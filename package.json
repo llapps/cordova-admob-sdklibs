@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sunnycupertino/cordova-admob-sdklibs.git"
+    "url": "https://github.com/llapps/cordova-admob-sdklibs.git"
   },
   "bugs": {
-    "url": "https://github.com/sunnycupertino/cordova-admob-sdklibs/issues"
+    "url": "https://github.com/llapps/cordova-admob-sdklibs/issues"
   },
   "keywords": [
     "cordova",
