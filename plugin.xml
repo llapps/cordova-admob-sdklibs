@@ -17,6 +17,7 @@
     </engines>
 
     <platform name="android">
+            <framework src="olli.gradle" custom="true" type="gradleReference"/>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
              <meta-data android:name="applovin.sdk.key" android:value="U9RgZxLdKFGcd0hiXuS_flFpUfmZIA07uzllTXVILGRtKXeV4-wzsTKIlkTnIBg94UnxHtrqGzDx5bVwMmvVuM" />
             <meta-data android:name="com.google.android.gms.ads.flag.rtb_enabled" android:value="true"/>
