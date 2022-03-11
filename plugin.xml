@@ -11,6 +11,10 @@
     <keywords>admob,google,ad</keywords>
     <repo>https://github.com/llapps/admob-plus-cordova.git</repo>
     <issue>https://github.com/llapps/admob-plus-cordova/issues</issue>
+	
+	<js-module name="AdMob" src="www/admob.js">
+        <clobbers target="admob" />
+    </js-module>
 
     <engines>
         <engine name="cordova" version=">=3.0" />
