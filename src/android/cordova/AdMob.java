@@ -72,24 +72,20 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
                     }}));
                 });
 				*/
-				MobileAds.initialize(this, new OnInitializationCompleteListener() {
-					@Override
-					public void onInitializationComplete(InitializationStatus initializationStatus) {
-						Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
-						for (String adapterClass : statusMap.keySet()) {
-							AdapterStatus status = statusMap.get(adapterClass);
-							Log.d("MyApp", String.format(
-									"Adapter name: %s, Description: %s, Latency: %d",
-									adapterClass, status.getDescription(), status.getLatency()));
-						}
+				MobileAds.initialize(cordova.getActivity(), new OnInitializationCompleteListener() {
+						@Override
+						public void onInitializationComplete(InitializationStatus initializationStatus) {
+							Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
+							for (String adapterClass : statusMap.keySet()) {
+								AdapterStatus status = statusMap.get(adapterClass);
+								Log.d("MyApp", String.format(
+										"Adapter name: %s, Description: %s, Latency: %d",
+										adapterClass, status.getDescription(), status.getLatency()));
+							}
 
-						// Start loading ads here...
-					}
-					helper.configForTestLab();
-                    callbackContext.success(new JSONObject(new HashMap<String, Object>() {{
-                        put("version", MobileAds.getVersionString());
-                    }}));
-				});
+							// Start loading ads here...
+						}
+					});
 
                 break;
             case Actions.CONFIGURE:
