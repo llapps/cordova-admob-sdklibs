@@ -71,7 +71,7 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
                     }}));
                 });
 				MediationTestSuite.addTestDevice("D6515AC6EEF3F1CD54447A25771153C6");
-				MediationTestSuite.launch(activity);
+				MediationTestSuite.launch(cordova.getActivity());
                 break;
             case Actions.CONFIGURE:
             case Actions.CONFIG_REQUEST:
