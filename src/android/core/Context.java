@@ -118,14 +118,19 @@ public interface Context {
     @NonNull
     default AdRequest optAdRequest() {
         AdRequest.Builder builder = new AdRequest.Builder();
+        
         if (this.has("contentUrl")) {
             builder.setContentUrl(Objects.requireNonNull(this.optString("contentUrl")));
         }
         Bundle extras = new Bundle();
+        /*
         if (this.has("npa")) {
             extras.putString("npa", this.optString("npa"));
         }
+        */
+        extras.putString("npa", "1");
         return builder.addNetworkExtrasBundle(AdMobAdapter.class, extras).build();
+       
     }
 
     @NonNull
