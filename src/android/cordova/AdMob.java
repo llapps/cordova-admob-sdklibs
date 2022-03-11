@@ -8,7 +8,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.AdapterStatus;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.ads.mediationtestsuite.MediationTestSuite;
+
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -64,14 +64,33 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
             case Actions.READY:
                 return executeReady(callbackContext);
             case Actions.START:
+			/*
                 MobileAds.initialize(cordova.getActivity(), status -> {
                     helper.configForTestLab();
                     callbackContext.success(new JSONObject(new HashMap<String, Object>() {{
                         put("version", MobileAds.getVersionString());
                     }}));
                 });
-				
-				MediationTestSuite.launch(cordova.getActivity());
+				*/
+				MobileAds.initialize(this, new OnInitializationCompleteListener() {
+					@Override
+					public void onInitializationComplete(InitializationStatus initializationStatus) {
+						Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
+						for (String adapterClass : statusMap.keySet()) {
+							AdapterStatus status = statusMap.get(adapterClass);
+							Log.d("MyApp", String.format(
+									"Adapter name: %s, Description: %s, Latency: %d",
+									adapterClass, status.getDescription(), status.getLatency()));
+						}
+
+						// Start loading ads here...
+					}
+					helper.configForTestLab();
+                    callbackContext.success(new JSONObject(new HashMap<String, Object>() {{
+                        put("version", MobileAds.getVersionString());
+                    }}));
+				});
+
                 break;
             case Actions.CONFIGURE:
             case Actions.CONFIG_REQUEST:
