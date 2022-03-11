@@ -1,8 +1,4 @@
 
-
-cordova.define("admob-plus-cordova.AdMob", function(require, exports, module) {
-'use strict';
-
 var cordova$1 = require('cordova');
 var channel = require('cordova/channel');
 var exec = require('cordova/exec');
@@ -676,6 +672,3 @@ channel__default["default"].onCordovaReady.subscribe(function () {
 });
 
 module.exports = admob;
-
-});
-
