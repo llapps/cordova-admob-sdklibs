@@ -2,6 +2,9 @@ package admob.plus.cordova.ads;
 
 import androidx.annotation.NonNull;
 
+import android.util.Log;
+import com.google.android.gms.ads.LoadAdError;
+
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -34,7 +37,9 @@ public class Interstitial extends AdBase {
         InterstitialAd.load(getActivity(), adUnitId, adReequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-               
+                ResponseInfo responseInfo = interstitialAd.getResponseInfo();
+                Log.i("olli", responseInfo.toString());
+
                 mAd = interstitialAd;
                 mAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                     @Override
