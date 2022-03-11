@@ -30,8 +30,8 @@ public class Interstitial extends AdBase {
     @Override
     public void load(Context ctx) {
         clear();
-
-        InterstitialAd.load(getActivity(), adUnitId, adRequest, new InterstitialAdLoadCallback() {
+        AdRequest adReequest = new AdRequest.Builder().build()
+        InterstitialAd.load(getActivity(), adUnitId, adReequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                 mAd = interstitialAd;
