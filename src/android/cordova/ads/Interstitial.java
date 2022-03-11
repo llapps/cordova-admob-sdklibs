@@ -13,6 +13,9 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.ads.mediation.admob.AdMobAdapter;
+import com.google.ads.mediation.applovin.ApplovinAdapter
+import com.google.ads.mediation.applovin.AppLovinMediationAdapter
+
 
 import admob.plus.cordova.ExecuteContext;
 import admob.plus.cordova.Generated.Events;
@@ -39,7 +42,7 @@ public class Interstitial extends AdBase {
         InterstitialAd.load(getActivity(), adUnitId, adReequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                ResponseInfo responseInfo = interstitialAd.getAdapterResponses();
+                ResponseInfo responseInfo = interstitialAd.getAdapterResponse();
                 Log.i("olli", responseInfo.toString());
 
                 mAd = interstitialAd;
