@@ -38,7 +38,7 @@ public class Interstitial extends AdBase {
         InterstitialAd.load(getActivity(), adUnitId, adReequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                ResponseInfo responseInfo = interstitialAd.getResponseInfo().getAdapterResponses();
+                ResponseInfo responseInfo = interstitialAd.getAdapterResponses();
                 Log.i("olli", responseInfo.toString());
 
                 mAd = interstitialAd;
