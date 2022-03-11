@@ -1,9 +1,9 @@
 {
-  "name": "admob-plus-cordova",
+  "name": "cordova-admob-sdklibs",
   "version": "2.1.6",
   "description": "Add Google Mobile Ads SDK to Cordova project, as dependency for other plugins",
   "cordova": {
-    "id": "admob-plus-cordova",
+    "id": "cordova-admob-sdklibs",
     "platforms": [
       "android",
       "ios",
