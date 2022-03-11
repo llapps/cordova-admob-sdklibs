@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import android.util.Log;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.ResponseInfo;
 
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
