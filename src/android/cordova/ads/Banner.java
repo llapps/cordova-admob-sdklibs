@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.AdRequest;
 
 import java.util.HashMap;
 
@@ -194,7 +195,8 @@ public class Banner extends AdBase {
         mAdViewOld = mAdView;
 
         mAdView = createBannerView();
-        mAdView.loadAd(adRequest);
+        AdRequest adReequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adReequest);
         addBannerView();
     }
 
