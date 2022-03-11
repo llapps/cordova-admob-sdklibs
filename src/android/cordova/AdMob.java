@@ -64,29 +64,12 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
             case Actions.READY:
                 return executeReady(callbackContext);
             case Actions.START:
-			/*
                 MobileAds.initialize(cordova.getActivity(), status -> {
                     helper.configForTestLab();
                     callbackContext.success(new JSONObject(new HashMap<String, Object>() {{
                         put("version", MobileAds.getVersionString());
                     }}));
                 });
-				*/
-				MobileAds.initialize(cordova.getActivity(), new OnInitializationCompleteListener() {
-						@Override
-						public void onInitializationComplete(InitializationStatus initializationStatus) {
-							Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
-							for (String adapterClass : statusMap.keySet()) {
-								AdapterStatus status = statusMap.get(adapterClass);
-								Log.d("MyApp", String.format(
-										"Adapter name: %s, Description: %s, Latency: %d",
-										adapterClass, status.getDescription(), status.getLatency()));
-							}
-
-							// Start loading ads here...
-						}
-					});
-
                 break;
             case Actions.CONFIGURE:
             case Actions.CONFIG_REQUEST:
