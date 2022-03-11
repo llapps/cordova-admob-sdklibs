@@ -2,15 +2,15 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-admob-sdklibs"
+        id="admob-plus-cordova"
         version="2.1.6">
       
     <name>Google Mobile Ads SDK for Cordova</name>
     <description>Add Google Mobile Ads SDK to Cordova project, as dependency for other plugins</description>
     <author>Google</author>
     <keywords>admob,google,ad</keywords>
-    <repo>https://github.com/llapps/cordova-admob-sdklibs.gitt</repo>
-    <issue>https://github.com/llapps/cordova-admob-sdklibs/issues</issue>
+    <repo>https://github.com/llapps/admob-plus-cordova.git</repo>
+    <issue>https://github.com/llapps/admob-plus-cordova/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=3.0" />
