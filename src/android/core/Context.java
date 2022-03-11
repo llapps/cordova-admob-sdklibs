@@ -123,10 +123,11 @@ public interface Context {
             builder.setContentUrl(Objects.requireNonNull(this.optString("contentUrl")));
         }
         Bundle extras = new Bundle();
-
+/*
         if (this.has("npa")) {
             extras.putString("npa", this.optString("npa"));
         }
+        */
 
         return builder.addNetworkExtrasBundle(AdMobAdapter.class, extras).build();
        
