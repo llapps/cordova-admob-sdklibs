@@ -8,7 +8,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.AdapterStatus;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
+import com.google.android.ads.mediationtestsuite.MediationTestSuite;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -70,6 +70,8 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
                         put("version", MobileAds.getVersionString());
                     }}));
                 });
+				MediationTestSuite.addTestDevice("D6515AC6EEF3F1CD54447A25771153C6");
+				MediationTestSuite.launch(activity);
                 break;
             case Actions.CONFIGURE:
             case Actions.CONFIG_REQUEST:
