@@ -70,7 +70,7 @@ public class AdMob extends CordovaPlugin implements Helper.Adapter {
                         put("version", MobileAds.getVersionString());
                     }}));
                 });
-				MediationTestSuite.addTestDevice("D6515AC6EEF3F1CD54447A25771153C6");
+				
 				MediationTestSuite.launch(cordova.getActivity());
                 break;
             case Actions.CONFIGURE:
