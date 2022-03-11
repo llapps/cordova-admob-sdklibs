@@ -34,10 +34,7 @@ public class Interstitial extends AdBase {
         InterstitialAd.load(getActivity(), adUnitId, adReequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                ResponseInfo responseInfo = interstitialAd.getResponseInfo();
-                Log.d("myapp", responseInfo.toString());
-
-
+               
                 mAd = interstitialAd;
                 mAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                     @Override
