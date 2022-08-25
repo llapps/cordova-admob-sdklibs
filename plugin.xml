@@ -22,6 +22,9 @@
              <meta-data android:name="applovin.sdk.key" android:value="U9RgZxLdKFGcd0hiXuS_flFpUfmZIA07uzllTXVILGRtKXeV4-wzsTKIlkTnIBg94UnxHtrqGzDx5bVwMmvVuM" />
             <meta-data android:name="com.google.android.gms.ads.flag.rtb_enabled" android:value="true"/>
             <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="2478667835711719"/>
+            <meta-data android:name="com.facebook.sdk.ClientToken" android:value="78e5207909a0670ad360500dfdd84312"/>
+                
        </config-file>
             
         <!-- for gradle -->
@@ -29,6 +32,9 @@
         <framework src="com.google.ads.mediation:applovin:11.1.3.0" />
         <framework src="com.google.ads.mediation:adcolony:4.6.5.0" />
         <framework src="com.google.ads.mediation:ironsource:7.2.0.0" />
+        <framework src="com.facebook.android:facebook-android-sdk:14.0.0" />
+            
+            
      </platform>
     
   
