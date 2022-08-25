@@ -23,7 +23,7 @@
             <meta-data android:name="com.google.android.gms.ads.flag.rtb_enabled" android:value="true"/>
             <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
             <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="2478667835711719"/>
-            <meta-data android:name="com.facebook.sdk.ClientToken" android:value="78e5207909a0670ad360500dfdd84312"/>
+
                 
        </config-file>
             
