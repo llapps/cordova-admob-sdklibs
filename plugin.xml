@@ -20,8 +20,7 @@
             <framework src="olli.gradle" custom="true" type="gradleReference"/>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
              <meta-data android:name="com.google.android.gms.ads.flag.rtb_enabled" android:value="true"/>
-            <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize"  android:exported="true" />
-
+            
                 
        </config-file>
 
